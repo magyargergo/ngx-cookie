@@ -1,4 +1,4 @@
-# ngx-cookie  [![CI](https://github.com/salemdar/ngx-cookie/workflows/CI/badge.svg)](https://github.com/salemdar/ngx-cookie/actions?query=workflow%3ACI) [![npm version](https://img.shields.io/npm/v/ngx-cookie.svg)](https://www.npmjs.com/package/ngx-cookie) [![Downloads](http://img.shields.io/npm/dm/ngx-cookie.svg)](https://npmjs.org/package/ngx-cookie) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f34a6ed308934c168e7b31c99d2adb75)](https://app.codacy.com/gh/salemdar/ngx-cookie?utm_source=github.com&utm_medium=referral&utm_content=salemdar/ngx-cookie&utm_campaign=Badge_Grade) [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/87ced3faf4104a8eb92b9b1939f12a54)](https://www.codacy.com/gh/salemdar/ngx-cookie/dashboard?utm_source=github.com&utm_medium=referral&utm_content=salemdar/ngx-cookie&utm_campaign=Badge_Coverage)
+# ngx-cookie  [![CI](https://github.com/salemdar/ngx-cookie/workflows/CI/badge.svg)](https://github.com/salemdar/ngx-cookie/actions?query=workflow%3ACI) [![npm version](https://img.shields.io/npm/v/ngx-cookie.svg)](https://www.npmjs.com/package/ngx-cookie) [![Downloads](http://img.shields.io/npm/dm/ngx-cookie.svg)](https://npmjs.org/package/ngx-cookie)
 
 
 > Implementation of Angular 1.x $cookies service to Angular
@@ -34,7 +34,7 @@ yarn add ngx-cookie
 
 ### <a name="usage"></a> Usage
 
-`CookieModule` should be registered in an angular module with `withOptions()` static method.
+`CookieModule` should be registered in angular module with `withOptions()` static method.
 These methods accept `CookieOptions` objects as well. Leave it blank for the defaults.
 
 ```typescript
@@ -91,7 +91,7 @@ Then edit `app.server.module.ts` and add `CookieBackendModule.withOptions()` to 
 ```typescript
 /* app.server.module.ts */
 
-import { CookieBackendModule } from 'ngx-cookie-backend';
+import { CookieBackendModule } from 'ngx-cookie';
 
 @NgModule({
   imports: [
@@ -107,8 +107,6 @@ Next, we need to make providers for the `'REQUEST'` and `'RESPONSE'` objects cre
 
 ```typescript
 /* server.ts */
-import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
-
 // All regular routes use the Universal engine
 server.get('*', (req, res) => {
   res.render(indexHtml, {
