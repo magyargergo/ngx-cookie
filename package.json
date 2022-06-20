@@ -1,6 +1,6 @@
 {
-  "name": "ngx-cookie",
-  "version": "6.0.0",
+  "name": "@freelancercom/ngx-cookie",
+  "version": "6.0.0-fork.1",
   "description": "Implementation of Angular 1.x $cookies service to Angular",
   "scripts": {
     "ng": "ng",
